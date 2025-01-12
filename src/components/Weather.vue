@@ -8,7 +8,7 @@
     >
       <v-row class="d-flex flex-column">
         <v-col class="pa-0">
-          <h1 class="text-center">Weather App</h1>
+          <h1 class="text-center">Weather App1</h1>
         </v-col>
         <v-col class="pa-0 mt-5">
           <v-form @submit.prevent="handleSubmit">
