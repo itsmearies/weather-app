@@ -3,7 +3,7 @@
     <v-btn @click="toggleTheme" variant="outlined" class="text-capitalize">toggle theme</v-btn>
     <v-card
       class="mt-5 pa-10 elevation-4 rounded-lg"
-      width="450"
+      width="450z"
       
     >
       <v-row class="d-flex flex-column">
@@ -30,9 +30,9 @@
           </div>
         </v-col>
         
-        <v-col class="pa-0 mt-15">
+        <v-col class="mt-15">
           <div class="d-flex">
-            <div class="d-flex justify-start align-center flex-grow-1">
+            <div class="d-flex justify-start align-center flex-grow-1 mr-10">
               <v-icon icon="mdi-waves" size="x-large" class="mr-5"></v-icon>
               <div>
                 <p>{{ weatherData.humidity }}%</p>
@@ -100,7 +100,7 @@ const inputRef = ref(null);
 // Function to search weather data for a city
 const search = async (city) => {
   try {
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${import.meta.env.VITE_APP_ID}`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${import.meta.env.VITE_APP_ID}`;
     const response = await fetch(url);
 
     if (!response.ok) {
